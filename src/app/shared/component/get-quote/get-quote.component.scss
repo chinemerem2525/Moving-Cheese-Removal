@@ -1,0 +1,17 @@
+.get-quote {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+.form-group .fa-calendar-alt {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+.form-group input[type="text"] {
+  padding-left: 2.5rem;
+}

@@ -1,0 +1,25 @@
+.logo-text {
+  font-weight: bold;
+}
+.text-red {
+  color: #F69323;
+}
+.text-black {
+  color: #000;
+}
+
+  /* Adjust the size of the hamburger icon */
+  .navbar-toggler i {
+    font-size: 25px; /* Change this value to adjust the size */
+}
+
+/* Optionally reduce the button padding for better alignment */
+.navbar-toggler {
+    padding: 5px 10px; /* Adjust as needed */
+}
+
+@media (min-width: 990px) {
+   .hide-logo{
+    display: none;
+   }
+}

@@ -1,0 +1,54 @@
+
+// banner
+.banner {
+  background-color: #004a99;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.banner .phone-number {
+  color: #ff6600;
+}
+.banner .btn {
+  margin: 10px;
+}
+.btn-quote {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+}
+.btn-quote:hover {
+  background-color: #e65c00;
+}
+.btn-touch {
+  background-color: white;
+  color: #004a99;
+  border: 1px solid #004a99;
+}
+.btn-touch:hover {
+  background-color: #f2f2f2;
+}
+
+
+
+
+input[type="date"] {
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+// button:hover {
+//   background-color: #0056b3;
+// }

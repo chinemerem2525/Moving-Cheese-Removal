@@ -1,0 +1,195 @@
+.hero-content h6,
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-btn {
+  visibility: hidden; /* Start hidden */
+}
+
+.hero-content h6.animate__fadeInUp,
+.hero-content h1.animate__fadeInUp,
+.hero-content p.animate__fadeInUp,
+.hero-content .hero-btn.animate__fadeInUp {
+  visibility: visible; /* Becomes visible during animation */
+}
+
+
+.feature-box {
+  background-color: #1f3f6b;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature-box .feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex: 1 1 100%;
+}
+
+.feature-box .feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.feature-box .feature-item i {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.feature-box .feature-item h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.feature-box .feature-item p {
+  margin: 0;
+}
+
+@media (min-width: 576px) {
+  .feature-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-box .feature-item i {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .feature-box .feature-item {
+    flex-direction: row;
+    flex: 1 1 calc(33.33% - 2rem);
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .feature-box .feature-item i {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .feature-box .feature-item:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 3rem;
+    background-color: white;
+    margin: 0 1rem;
+  }
+}
+
+// bus
+
+.banner {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px; /* Add padding for smaller screens */
+  position: relative;
+
+  img {
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+  }
+
+  .truck {
+    position: absolute;
+    left: 20px; /* Add some padding to avoid screen edges */
+    bottom: 0;
+    img {
+      width: 200px; /* Default image width */
+      height: auto;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row; /* Stack content by default */
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+
+    .text {
+      font-size: 20px; /* Adjust font size for better readability */
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .btn {
+      background-color: #ff0000;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #d10000; /* Darker red on hover */
+      }
+    }
+  }
+
+  /* Responsive styles */
+  @media (max-width: 899px) {
+    .content {
+      flex-direction: row; /* Arrange text and button side-by-side */
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        margin: 0 20px;
+        font-size: 24px;
+      }
+    }
+
+    .truck {
+      position: static; /* Reset position for larger screens */
+      margin-right: 0px; /* Add spacing */
+      // img {
+      //   width: 300px; /* Larger image for larger screens */
+      // }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .content-container {
+      display: flex;
+      flex-direction: row; /* Stack items vertically by default */
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      gap: 20px; /* Add space between image and text */
+    }
+
+    .image-box img {
+      max-width: 50%; /* Ensure the image scales with the container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 5px; /* Optional styling */
+    }
+
+    .text-box {
+      text-align: center; /* Center-align text for smaller screens */
+      max-width: 600px;
+    }
+  }
+}

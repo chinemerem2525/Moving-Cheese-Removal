@@ -1,0 +1,155 @@
+<app-header></app-header>
+
+
+  <main class="main">
+
+      <!-- breadcrumb -->
+      <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/breadcrumb.jpg)">
+          <div class="container">
+              <h2 class="breadcrumb-title">Contact Us</h2>
+              <ul class="breadcrumb-menu">
+                  <li><a href="">Home</a></li>
+                  <li class="active">Contact Us</li>
+              </ul>
+          </div>
+      </div>
+      <!-- breadcrumb end -->
+
+
+
+      <!-- contact area -->
+      <div class="contact-area py-120">
+          <div class="container">
+              <div class="contact-wrapper">
+                  <div class="row">
+                      <div class="col-md-8 align-self-center">
+                          <div class="contact-form">
+                              <div class="contact-form-header">
+                                  <h2>Get In Touch</h2>
+                                  <p>We'd love to hear from you! Whether you have questions, need assistance, or want to discuss our services, feel free to reach out.</p>
+                              </div>
+                              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contact-form">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        formControlName="name"
+                                        placeholder="Your Name"
+                                      />
+                                      <small *ngIf="formControls.name.invalid && formControls.name.touched" class="text-danger">
+                                        Name is required and must be at least 3 characters long.
+                                      </small>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <input
+                                        type="email"
+                                        class="form-control"
+                                        formControlName="email"
+                                        placeholder="Your Email"
+                                      />
+                                      <small *ngIf="formControls.email.invalid && formControls.email.touched" class="text-danger">
+                                        Please enter a valid email address.
+                                      </small>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="subject"
+                                    placeholder="Your Subject"
+                                  />
+                                  <small *ngIf="formControls.subject.invalid && formControls.subject.touched" class="text-danger">
+                                    Subject is required and must be at least 5 characters long.
+                                  </small>
+                                </div>
+                                <div class="form-group">
+                                  <textarea
+                                    class="form-control"
+                                    formControlName="message"
+                                    cols="30"
+                                    rows="5"
+                                    placeholder="Write Your Message"
+                                  ></textarea>
+                                  <small *ngIf="formControls.message.invalid && formControls.message.touched" class="text-danger">
+                                    Message is required and must be at least 10 characters long.
+                                  </small>
+                                </div>
+                                <button type="submit" class="theme-btn" [disabled]="contactForm.invalid">
+                                  <i class="far fa-paper-plane"></i> Send Message
+                                </button>
+                                <div class="col-md-12 mt-3">
+                                  <div class="form-messege text-success"></div>
+                                </div>
+                              </form>
+
+
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="contact-content">
+                              <div class="contact-info">
+                                  <div class="contact-info-icon">
+                                      <i class="fal fa-map-marker-alt"></i>
+                                  </div>
+                                  <div class="contact-info-content">
+                                      <h5>Office Address</h5>
+                                      <p>Apartment 4 crouch court 6 Tanner's way Birmingham B296GU.</p>
+                                  </div>
+                              </div>
+                              <div class="contact-info">
+                                  <div class="contact-info-icon">
+                                      <i class="fal fa-phone"></i>
+                                  </div>
+                                  <div class="contact-info-content">
+                                      <h5>Call Us</h5>
+                                      <p>+44 748 2162 645</p>
+                                  </div>
+                              </div>
+                              <div class="contact-info">
+                                  <div class="contact-info-icon">
+                                      <i class="fal fa-envelope"></i>
+                                  </div>
+                                  <div class="contact-info-content">
+                                      <h5>Email Us</h5>
+                                      <p><a href="https://live.themewild.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2d44434b426d48554c405d4148034e4240">gmail.com</a></p>
+                                  </div>
+                              </div>
+                              <div class="contact-info">
+                                  <div class="contact-info-icon">
+                                      <i class="fal fa-clock"></i>
+                                  </div>
+                                  <div class="contact-info-content">
+                                      <h5>Office Open</h5>
+                                      <p>Mon - Sun (12AM - 11.59PM)</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+              <div class="contact-map">
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.329347502057!2d-1.9415190245903888!3d52.436948442376796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870b9dcd1a389c9%3A0x7e893f0cc004e231!2sCrouch%20Court!5e0!3m2!1sen!2sng!4v1736624946999!5m2!1sen!2sng"
+                      style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+
+          </div>
+      </div>
+      <!-- end contact area -->
+
+
+
+
+  </main>
+
+
+
+  <app-footer></app-footer>

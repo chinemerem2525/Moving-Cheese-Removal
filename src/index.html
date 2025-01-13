@@ -6,8 +6,81 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/all-fontawesome.min.css">
+  <link rel="stylesheet" href="./assets/css/animate.min.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/magnific-popup.min.css">
+  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+
+<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+
+
 </head>
 <body>
   <app-root></app-root>
+
+<!-- js -->
+<script src="./assets/js/jquery-3.6.0.min.js"></script>
+<script src="./assets/js/modernizr.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="./assets/js/jquery.magnific-popup.min.js"></script>
+<script src="./assets/js/isotope.pkgd.min.js"></script>
+<script src="./assets/js/jquery.appear.min.js"></script>
+<script src="./assets/js/jquery.easing.min.js"></script>
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/counter-up.js"></script>
+<script src="./assets/js/masonry.pkgd.min.js"></script>
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<script src="./assets/js/jquery.min.js"></script>
+
+
+
+<script>
+  $(document).ready(function () {
+    $(".hero-slider").owlCarousel({
+      items: 1, // Show one item at a time
+      loop: true, // Enable infinite loop
+      autoplay: true, // Enable automatic sliding
+      autoplayTimeout: 5000, // Set slide duration (in milliseconds)
+      autoplayHoverPause: true, // Pause on hover
+      nav: true, // Enable navigation buttons
+      dots: true, // Enable pagination dots
+      onChanged: handleSlideChange,
+      navText: [
+        '<i class="fas fa-chevron-left"></i>', // Left navigation button icon
+        '<i class="fas fa-chevron-right"></i>', // Right navigation button icon
+      ],
+    });
+
+    function handleSlideChange(event) {
+    // Get the currently active slide
+    let currentIndex = event.item.index;
+    let activeSlide = $(".owl-item").eq(currentIndex).find(".hero-content");
+
+    // Remove animation classes from all slides
+    $(".hero-content h6, .hero-content h1, .hero-content p, .hero-content .hero-btn").removeClass("animate__fadeInUp animated").css("visibility", "hidden");
+
+    // Reapply animation classes to the active slide
+    activeSlide.find("h6").addClass("animate__fadeInUp animated").css("visibility", "visible");
+    activeSlide.find("h1").addClass("animate__fadeInUp animated").css("visibility", "visible");
+    activeSlide.find("p").addClass("animate__fadeInUp animated").css("visibility", "visible");
+    activeSlide.find(".hero-btn").addClass("animate__fadeInUp animated").css("visibility", "visible");
+  }
+  });
+
+
+</script>
+
+
+
+
+
+
 </body>
 </html>
