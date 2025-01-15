@@ -12,7 +12,8 @@ import { Subscriber } from 'rxjs';
 export class GetQuoteComponent implements OnInit {
   quoteForm!: FormGroup;
   id: any;
-
+  isHouseRemoval: boolean = false;
+  selectedVideo: File | null = null;
 
 
   constructor(private fb: FormBuilder, private fs: FormService) {}
@@ -26,8 +27,20 @@ export class GetQuoteComponent implements OnInit {
       moveDate: ['', Validators.required],
       movingFrom: ['', Validators.required],
       movingTo: ['', Validators.required],
+      inventory: [''],
       message: [''],
     });
+  }
+
+  onMovingTypeChange() {
+    this.isHouseRemoval = this.quoteForm.get('movingType')?.value === 'House Removal';
+    if (this.isHouseRemoval) {
+      this.quoteForm.get('inventory')?.setValidators(Validators.required);
+    } else {
+      this.quoteForm.get('inventory')?.clearValidators();
+      this.quoteForm.get('inventory')?.reset();
+    }
+    this.quoteForm.get('inventory')?.updateValueAndValidity();
   }
 
   onSubmit(): void {
@@ -42,16 +55,24 @@ export class GetQuoteComponent implements OnInit {
        this.quoteForm.value.movingFrom,
        this.quoteForm.value.movingTo,
        this.quoteForm.value.message,
+       this.quoteForm.value.inventory,
        new Date().toISOString()
       );
 
       console.log('quoteFormDetails', quoteFormDetails);
+
+      // Send FormData to the service
       this.fs.sendFormData(quoteFormDetails).subscribe(
-        (response:any)=>{
+        (response: any) => {
           console.log('Form submitted', response.name);
+        },
+        (error) => {
+          console.error('Error submitting form', error);
         }
-      )
+      );
+
       this.quoteForm.reset(); // Reset the form after submission
+      this.selectedVideo = null; // Reset the selected video
     } else {
       console.log('Form is invalid');
     }

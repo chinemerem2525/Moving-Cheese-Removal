@@ -8,7 +8,8 @@ export class QuoteFormDetails {
     public moveDate: string,
     public movingFrom: string,
     public movingTo: string,
+    public inventory: string,
     public message: string = '', // Provide a default value
-    public date:string
+    public date: string
   ) {}
 }

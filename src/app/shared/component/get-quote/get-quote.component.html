@@ -67,7 +67,7 @@
                         <!-- Moving Type -->
                         <div class="col-md-6 col-lg-6">
                           <div class="form-group">
-                            <select formControlName="movingType" class="form-select">
+                            <select formControlName="movingType" class="form-select" (change)="onMovingTypeChange()">
                               <option value="">Moving Type</option>
                               <option value="House Removal">House Removal</option>
                               <option value="Office Removal">Office Removal</option>
@@ -80,11 +80,11 @@
                           </div>
                         </div>
 
-                         <!-- Date -->
+                        <!-- Date -->
                         <div class="col-md-6 col-lg-4">
                           <div class="form-group">
                             <input
-                              type="text"
+                              type="date"
                               formControlName="moveDate"
                               class="form-control"
                               placeholder="Select move date"
@@ -128,6 +128,21 @@
                           </div>
                         </div>
 
+                        <!-- Inventory (conditional) -->
+                        <div class="col-md-12" *ngIf="isHouseRemoval">
+                          <div class="form-group">
+                            <textarea
+                              formControlName="inventory"
+                              class="form-control"
+                     placeholder="List of items to move (inventory)"
+                              rows="4"
+                            ></textarea>
+                            <small class="text-danger" *ngIf="quoteForm.get('inventory')?.touched && quoteForm.get('inventory')?.invalid">
+                              Inventory is required for house removal
+                            </small>
+                          </div>
+                        </div>
+
                         <!-- Message -->
                         <div class="form-group">
                           <textarea
@@ -144,7 +159,6 @@
                         </button>
                       </div>
                     </form>
-
 
                   </div>
               </div>

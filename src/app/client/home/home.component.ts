@@ -15,7 +15,7 @@ export class HomeComponent implements AfterViewInit {
       items: 1, // Show one item at a time
       loop: true, // Enable infinite loop
       autoplay: true, // Enable automatic sliding
-      autoplayTimeout: 5000, // Set slide duration (in milliseconds)
+      autoplayTimeout: 15000, // Set slide duration (in milliseconds)
       autoplayHoverPause: true, // Pause on hover
       nav: true, // Enable navigation buttons
       dots: true, // Enable pagination dots
