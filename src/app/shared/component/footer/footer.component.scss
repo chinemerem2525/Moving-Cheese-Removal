@@ -7,8 +7,6 @@
 .text-black {
   color: #000;
 }
-
-
 // banner
 .banner {
   background-color: #004a99;
@@ -18,25 +16,32 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .banner .phone-number {
   color: #ff6600;
+  white-space: nowrap; /* Prevents the phone number from breaking into multiple lines */
 }
+
 .banner .btn {
   margin: 10px;
 }
+
 .btn-quote {
   background-color: #ff6600;
   color: white;
   border: none;
 }
+
 .btn-quote:hover {
   background-color: #e65c00;
 }
+
 .btn-touch {
   background-color: white;
   color: #004a99;
   border: 1px solid #004a99;
 }
+
 .btn-touch:hover {
   background-color: #f2f2f2;
 }

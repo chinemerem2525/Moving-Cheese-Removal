@@ -80,23 +80,22 @@
                           </div>
                         </div>
 
-                        <!-- Date -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <input
-                              type="date"
-                              formControlName="moveDate"
-                              class="form-control"
-                              placeholder="Select move date"
-                              onfocus="(this.type='date')"
-                              onblur="(this.type='text')"
-                            />
-                            <i class="fas fa-calendar-alt"></i>
-                            <small class="text-danger" *ngIf="quoteForm.get('moveDate')?.touched && quoteForm.get('moveDate')?.invalid">
-                              Date of removal is required
-                            </small>
-                          </div>
-                        </div>
+                     <!-- Date -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <input
+                          type="date"
+                          formControlName="moveDate"
+                          class="form-control"
+                          placeholder="Select move date"
+                          required
+                        />
+                        <i class="fas fa-calendar-alt"></i>
+                        <small class="text-danger" *ngIf="quoteForm.get('moveDate')?.touched && quoteForm.get('moveDate')?.invalid">
+                          Date of removal is required
+                        </small>
+                      </div>
+                    </div>
 
                         <!-- Moving From -->
                         <div class="col-md-6 col-lg-4">
