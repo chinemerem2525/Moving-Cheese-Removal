@@ -16,10 +16,23 @@
 /* Optionally reduce the button padding for better alignment */
 .navbar-toggler {
     padding: 5px 10px; /* Adjust as needed */
+    border: none;
 }
 
 @media (min-width: 990px) {
    .hide-logo{
     display: none;
    }
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+.call {
+  color: #000;
+}
+
+.call:hover {
+  color: #F69323;
 }

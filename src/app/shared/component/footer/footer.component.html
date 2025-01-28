@@ -1,8 +1,8 @@
 <div class="banner">
-  <h2>NEED HELP? CALL OUR FRIENDLY REMOVALS TEAM ON: <span class="phone-number">+44 748 2162 645</span></h2>
-  <a href="quote" class="theme-btn">Get Quote<i
+  <h2>NEED HELP? CALL OUR FRIENDLY REMOVALS TEAM ON: <span class="phone-number">+44 771 5886 630</span></h2>
+  <a href="tel:+447715886630" class="theme-btn">Call<i
     class="far fa-arrow-right"></i></a> &nbsp;&nbsp;&nbsp;
-<a href="contact" class="theme-btn theme-btn2">Contact Us<i
+<a href="https://wa.me/447715886630" class="theme-btn theme-btn2">Chat<i
     class="far fa-arrow-right"></i></a>
 </div>
 
@@ -15,7 +15,7 @@
               <div class="col-md-6 col-lg-4">
                   <div class="footer-widget-box about-us">
                     <div class="col-lg-3">
-                      <a href="" class="logo">
+                      <a (click)="navigateToHome()" class="logo">
                         <div class="d-flex align-items-center">
                           <img alt="Red and white moving truck illustration" class="img-fluid" src="../../../../assets/img/logo/logo1.png" style="height: 64px;"/>
                           <div class="d-flex flex-column ml-3">
@@ -40,12 +40,6 @@
                           believe that change starts with us.
                        <!-- As a moving company, we make sure to handle your business with utmost care and reduce risk at a minimal because we believe that change starts with us. -->
                       </p>
-                      <ul class="footer-social">
-                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                      </ul>
                   </div>
               </div>
               <div class="col-md-6 col-lg-3">
@@ -53,7 +47,7 @@
                       <h4 class="footer-widget-title">Contact Us</h4>
                       <ul class="footer-contact">
                           <li><i class="far fa-map-marker-alt"></i>Apartment 4 crouch court 6 Tanner's way Birmingham B29 6GU.</li>
-                          <li><a href="tel:+21236547898"><i class="far fa-phone"></i>+44 748 2162 645</a></li>
+                          <li><a href="tel:+447715886630"><i class="far fa-phone"></i>+44 771 5886 630</a></li>
                           <li><a href="mailto:info@example.com"><i class="far fa-envelope"></i>example@gmail.com</a>
                           </li>
                           <li><i class="far fa-clock"></i>Mon - Sun (24/7)</li>
@@ -64,26 +58,26 @@
                   <div class="footer-widget-box list">
                       <h4 class="footer-widget-title">Quick Links</h4>
                       <ul class="footer-list">
-                          <li><a href="about"><i class="fas fa-caret-right"></i> About Us</a></li>
-                          <li><a href="quote"><i class="fas fa-caret-right"></i> Quote</a></li>
-                          <li><a href="home-removal"><i class="fas fa-caret-right"></i> House Removal</a></li>
-                          <li><a href="office-removal"><i class="fas fa-caret-right"></i> Office Removal</a></li>
-                          <li><a href="packing"><i class="fas fa-caret-right"></i> Packing and Unpacking</a></li>
+                          <li><a (click)="navigateToAbout()"><i class="fas fa-caret-right"></i> About Us</a></li>
+                          <li><a (click)="navigateToQuote()"><i class="fas fa-caret-right"></i> Quote</a></li>
+                          <li><a (click)="navigateToHouse()"><i class="fas fa-caret-right"></i> House Removal</a></li>
+                          <li><a (click)="navigateToOffice()"><i class="fas fa-caret-right"></i> Office Removal</a></li>
+                          <li><a (click)="navigateToPacking()"><i class="fas fa-caret-right"></i> Packing and Unpacking</a></li>
                       </ul>
                   </div>
               </div>
               <div class="col-md-6 col-lg-3">
                   <div class="footer-widget-box list">
-                      <h4 class="footer-widget-title">Newsletter</h4>
+                      <h4 class="footer-widget-title">Our Socials</h4>
                       <div class="footer-newsletter">
-                          <p>Subscribe Our Newsletter To Get Latest Update And News</p>
+                          <p>Follow us on social media for updates, insights, and the latest moving tips!</p>
                           <div class="subscribe-form">
-                              <form action="#">
-                                  <input type="email" class="form-control" placeholder="Your Email">
-                                  <button class="theme-btn" type="submit">
-                                      <i class="far fa-paper-plane"></i> Subscribe Now
-                                  </button>
-                              </form>
+                            <ul class="footer-social">
+                              <li><a href="https://www.facebook.com/profile.php?id=61572225287377" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                              <li><a href="https://www.instagram.com/movingcheeseremoval?igsh=aHNzNngzajBpZXps&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                              <li><a href="https://wa.me/447715886630" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                              <li><a href="www.tiktok.com/@moving_cheese_removal_" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                          </ul>
                           </div>
                       </div>
                   </div>
@@ -95,9 +89,10 @@
 </footer>
 <!-- footer area end -->
 
-
-
-
 <!-- scroll-top -->
-<a id="scroll-top" style="display: none;"><i class="far fa-long-arrow-up"></i></a>
-<!-- scroll-top end -->
+ <div style="float: left; ">
+  <a id="whatsapp" class="whatsapp" href="https://wa.me/447715886630"><i class="fab fa-whatsapp"></i></a>
+ </div>
+
+
+

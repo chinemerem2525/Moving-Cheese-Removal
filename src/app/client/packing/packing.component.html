@@ -7,7 +7,7 @@
         <div class="container">
             <h2 class="breadcrumb-title">Packing Service</h2>
             <ul class="breadcrumb-menu">
-                <li><a href="">Home</a></li>
+                <li><a (click)="navigateToHome()">Home</a></li>
                 <li class="active">Packing Service</li>
             </ul>
         </div>
@@ -69,7 +69,7 @@
               <div class="about-list-wrapper">
 
               </div>
-              <a href="quote" class="theme-btn">Packing Quote<i class="far fa-arrow-right"></i></a>
+              <a (click)="navigateToQuote()" class="theme-btn">Packing Quote<i class="far fa-arrow-right"></i></a>
           </div>
           </div>
           <div class="col-lg-6">
@@ -106,13 +106,13 @@
           </div>
           <div class="service-icon-shadow"></div>
           <h3 class="service-title">
-            <a href="office-removal">Office Removals</a>
+            <a (click)="navigateToOffice()">Office Removals</a>
           </h3>
           <p class="service-text">
             We have been delivering seamless office removals and relocations in and around the UK for years with outstanding results.
           </p>
           <div class="service-arrow">
-            <a href="office-removal" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
+            <a (click)="navigateToOffice()" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
           </div>
         </div>
       </div>
@@ -123,14 +123,14 @@
             </div>
             <div class="service-icon-shadow"></div>
             <h3 class="service-title">
-                <a href="home-removal">House Removals</a>
+                <a (click)="navigateToHouse()">House Removals</a>
             </h3>
             <p class="service-text">
              MOVING CHEESE REMOVAL offers professional, stress-free house removal services with a customer-focused approach
              locally.
             </p>
             <div class="service-arrow">
-                <a href="home-removal" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
+                <a (click)="navigateToHouse()" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
             </div>
         </div>
     </div>
@@ -141,13 +141,13 @@
           </div>
           <div class="service-icon-shadow"></div>
           <h3 class="service-title">
-            <a href="unpacking">Unpacking Service</a>
+            <a (click)="navigateToUnpacking()">Unpacking Service</a>
           </h3>
           <p class="service-text">
             Our unpacking service ensures a stress-free move by organizing your belongings and setting up essentials in your new space.
           </p>
           <div class="service-arrow">
-            <a href="unpacking" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
+            <a (click)="navigateToUnpacking()" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
           </div>
         </div>
       </div>

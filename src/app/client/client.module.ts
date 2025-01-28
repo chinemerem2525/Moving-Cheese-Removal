@@ -10,7 +10,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { QuoteComponent } from './quote/quote.component';
-import { BlogComponent } from './blog/blog.component';
 import { HomeRemovalComponent } from './home-removal/home-removal.component';
 import { OfficeRemovalComponent } from './office-removal/office-removal.component';
 import { PackingComponent } from './packing/packing.component';
@@ -22,7 +21,6 @@ import { UnpackingComponent } from './unpacking/unpacking.component';
     AboutComponent,
     ContactComponent,
     QuoteComponent,
-    BlogComponent,
     HomeRemovalComponent,
     OfficeRemovalComponent,
     PackingComponent,

@@ -4,7 +4,6 @@ import { ClientComponent } from './client.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { QuoteComponent } from './quote/quote.component';
-import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 import { HomeRemovalComponent } from './home-removal/home-removal.component';
 import { OfficeRemovalComponent } from './office-removal/office-removal.component';
@@ -32,10 +31,6 @@ const routes: Routes = [
       {
         path: 'quote',
         component: QuoteComponent
-      },
-      {
-        path: 'blog',
-        component: BlogComponent
       },
       {
         path: 'home-removal',

@@ -11,7 +11,6 @@
 .hero-content .hero-btn.animate__fadeInUp {
   visibility: visible; /* Becomes visible during animation */
 }
-
 .feature-box {
   background-color: #1f3f6b;
   color: white;
@@ -46,6 +45,17 @@
 
 .feature-box .feature-item p {
   margin: 0;
+}
+
+@media (min-width: 576px) {
+  .feature-box {
+      flex-direction: row;
+  }
+
+  .feature-box .feature-item {
+      flex: 1 1 auto;
+      margin-bottom: 0;
+  }
 }
 
 @media (min-width: 576px) {

@@ -30,7 +30,7 @@
                       <div class="middle-item">
                           <div class="middle-item-icon"><i class="far fa-phone"></i></div>
                           <div class="middle-item-content">
-                              <p> +44 748 2162 645</p>
+                              <a href="tel:+447715886630" class="call">+44 771 5886 630</a>
                           </div>
                       </div>
                       <div class="middle-item">
@@ -46,10 +46,10 @@
                           </div>
                       </div>
                       <div class="middle-social">
-                          <a href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a href="#"><i class="fab fa-twitter"></i></a>
-                          <a href="#"><i class="fab fa-instagram"></i></a>
-                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572225287377" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/movingcheeseremoval?igsh=aHNzNngzajBpZXps&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/447715886630" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="www.tiktok.com/@moving_cheese_removal_" target="_blank"><i class="fab fa-tiktok"></i></a>
                       </div>
                   </div>
               </div>
@@ -87,26 +87,23 @@
               </div>
               <div class="collapse navbar-collapse" id="main_nav">
                   <ul class="navbar-nav">
-                      <li class="nav-item"><a class="nav-link" href="">Home</a></li>
-                      <li class="nav-item"><a class="nav-link" href="about"> About </a></li>
+                      <li class="nav-item"><a class="nav-link" (click)="navigateToHome()">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" (click)="navigateToAbout()"> About </a></li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Removal Service</a>
                         <ul class="dropdown-menu fade-up">
-                            <li><a class="dropdown-item" href="home-removal">House Removals</a></li>
-                            <li><a class="dropdown-item" href="office-removal">Office Removal</a></li>
-                            <li><a class="dropdown-item" href="packing">Packing Service</a></li>
-                            <li><a class="dropdown-item" href="unpacking">Unpacking Service</a></li>
+                            <li><a class="dropdown-item" (click)="navigateToHouse()"href="">House Removals</a></li>
+                            <li><a class="dropdown-item" (click)="navigateToOffice()">Office Removal</a></li>
+                            <li><a class="dropdown-item" (click)="navigateToPacking()">Packing Service</a></li>
+                            <li><a class="dropdown-item" (click)="navigateToUnpacking()">Unpacking Service</a></li>
                         </ul>
                       </li>
-                      <li class="nav-item dropdown"><a class="nav-link" href="quote">Quote</a></li>
-                      <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+                      <li class="nav-item dropdown"><a class="nav-link" (click)="navigateToQuote()">Quote</a></li>
+                      <li class="nav-item"><a class="nav-link" (click)="navigateToContact()">Contact</a></li>
                   </ul>
                   <div class="header-nav-right">
-                      <!-- <div class="header-nav-search">
-                          <a href="#" class="search-box-outer"><i class="far fa-search"></i></a>
-                      </div> -->
                       <div class="header-btn">
-                          <a href="quote" class="theme-btn">GET QUOTE<i class="far fa-arrow-right"></i></a>
+                          <a (click)="navigateToQuote()" class="theme-btn">GET QUOTE<i class="far fa-arrow-right"></i></a>
                       </div>
                   </div>
               </div>

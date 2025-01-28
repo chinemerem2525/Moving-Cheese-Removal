@@ -8,7 +8,7 @@
           <div class="container">
               <h2 class="breadcrumb-title">Contact Us</h2>
               <ul class="breadcrumb-menu">
-                  <li><a href="">Home</a></li>
+                  <li><a (click)="navigateToHome()">Home</a></li>
                   <li class="active">Contact Us</li>
               </ul>
           </div>
@@ -80,7 +80,7 @@
                                     Message is required and must be at least 10 characters long.
                                   </small>
                                 </div>
-                                <button type="submit" class="theme-btn" [disabled]="contactForm.invalid">
+                                <button type="submit" class="theme-btn">
                                   <i class="far fa-paper-plane"></i> Send Message
                                 </button>
                                 <div class="col-md-12 mt-3">

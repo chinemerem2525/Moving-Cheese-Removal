@@ -22,9 +22,9 @@
                            </p>
                            <div class="hero-btn wow animate__animated animate__fadeInUp" data-wow-duration="1s"
                            data-wow-delay="1s">
-                           <a href="quote" class="theme-btn">Start Move<i
+                           <a (click)="navigateToQuote()" class="theme-btn">Start Move<i
                                    class="far fa-arrow-right"></i></a>
-                           <a href="about" class="theme-btn theme-btn2">About Us<i
+                           <a (click)="navigateToAbout()" class="theme-btn theme-btn2">About Us<i
                                    class="far fa-arrow-right"></i></a>
                            </div>
                        </div>
@@ -50,9 +50,9 @@
                          </p>
                          <div class="hero-btn wow animate__animated animate__fadeInUp" data-wow-duration="1s"
                              data-wow-delay="1s">
-                             <a href="quote" class="theme-btn">Start Move<i
+                             <a (click)="navigateToQuote()" class="theme-btn">Start Move<i
                                      class="far fa-arrow-right"></i></a>
-                             <a href="about" class="theme-btn theme-btn2">About Us<i
+                             <a (click)="navigateToAbout()" class="theme-btn theme-btn2">About Us<i
                                      class="far fa-arrow-right"></i></a>
                          </div>
                      </div>
@@ -78,9 +78,9 @@
                              </p>
                              <div class="hero-btn wow animate__animated animate__fadeInUp" data-wow-duration="1s"
                                  data-wow-delay="1s">
-                                 <a href="quote" class="theme-btn">Start Move<i
+                                 <a (click)="navigateToQuote()" class="theme-btn">Start Move<i
                                          class="far fa-arrow-right"></i></a>
-                                 <a href="about" class="theme-btn theme-btn2">About Us<i
+                                 <a (click)="navigateToAbout()" class="theme-btn theme-btn2">About Us<i
                                          class="far fa-arrow-right"></i></a>
                              </div>
                          </div>
@@ -93,32 +93,33 @@
      </div>
      <!-- hero slider end -->
 
-     <!--  -->
-     <div class="d-flex align-items-center justify-content-center bg-white container">
-      <div class="feature-box d-flex flex-column flex-sm-row justify-content-between align-items-center w-100 max-w-5xl">
-        <div class="feature-item d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
-          <i class="fas fa-stopwatch"></i>
-          <div>
-            <h2>Fast</h2>
-            <p>We are always on time</p>
+     <div class="bg-white d-flex align-items-center justify-content-center min-vh-50">
+      <div class="container d-flex align-items-center justify-content-center bg-white">
+          <div class="feature-box w-100 max-w-5xl">
+              <div class="feature-item d-flex flex-row align-items-center text-left">
+                  <i class="fas fa-stopwatch"></i>
+                  <div>
+                      <h2>Fast</h2>
+                      <p>We are always on time</p>
+                  </div>
+              </div>
+              <div class="feature-item d-flex flex-row align-items-center text-left">
+                  <i class="fas fa-shield-alt"></i>
+                  <div>
+                      <h2>Fully Insured</h2>
+                      <p>Our services are fully insured</p>
+                  </div>
+              </div>
+              <div class="feature-item d-flex flex-row align-items-center text-left">
+                  <i class="fas fa-thumbs-up"></i>
+                  <div>
+                      <h2>Reliable</h2>
+                      <p>You can depend on us</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="feature-item d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
-          <i class="fas fa-shield-alt"></i>
-          <div>
-            <h2>Fully Insured</h2>
-            <p>Our services are fully insured</p>
-          </div>
-        </div>
-        <div class="feature-item d-flex flex-column flex-sm-row align-items-center text-center text-sm-left">
-          <i class="fas fa-thumbs-up"></i>
-          <div>
-            <h2>Reliable</h2>
-            <p>You can depend on us</p>
-          </div>
-        </div>
       </div>
-    </div>
+  </div>
 
 
      <!-- about area -->
@@ -163,7 +164,7 @@
                             </li>
                              </ul>
                          </div>
-                         <a href="about" class="theme-btn">Discover More <i class="far fa-arrow-right"></i></a>
+                         <a (click)="navigateToAbout()" class="theme-btn">Discover More <i class="far fa-arrow-right"></i></a>
                      </div>
                  </div>
              </div>
@@ -199,14 +200,14 @@
                          </div>
                          <div class="service-icon-shadow"></div>
                          <h3 class="service-title">
-                             <a href="home-removal">House Removals</a>
+                             <a (click)="navigateToHouse()">House Removals</a>
                          </h3>
                          <p class="service-text">
                           MOVING CHEESE REMOVAL offers professional, stress-free house removal services with a customer-focused approach
                           locally.
                          </p>
                          <div class="service-arrow">
-                             <a href="home-removal" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
+                             <a (click)="navigateToHouse()" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
                          </div>
                      </div>
                  </div>
@@ -217,13 +218,13 @@
                          </div>
                          <div class="service-icon-shadow"></div>
                          <h3 class="service-title">
-                             <a href="office-removal">Office Removals</a>
+                             <a (click)="navigateToOffice()">Office Removals</a>
                          </h3>
                          <p class="service-text">
                           We have been delivering seamless office removals and relocations in and around UK for years with outstanding results.
                          </p>
                          <div class="service-arrow">
-                             <a href="office-removal" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
+                             <a (click)="navigateToOffice()" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
                          </div>
                      </div>
                  </div>
@@ -234,13 +235,13 @@
                          </div>
                          <div class="service-icon-shadow"></div>
                          <h3 class="service-title">
-                             <a href="packing">Packing Service</a>
+                             <a (click)="navigateToPacking()">Packing Service</a>
                          </h3>
                          <p class="service-text">
                           At MOVING CHESSE, we recognize that packing is among the most time-consuming and stressful parts of any move.
                          </p>
                          <div class="service-arrow">
-                             <a href="packing" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
+                             <a (click)="navigateToPacking()" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
                          </div>
                      </div>
                  </div>
@@ -251,13 +252,13 @@
                          </div>
                          <div class="service-icon-shadow"></div>
                          <h3 class="service-title">
-                             <a href="unpacking">Unpacking Service</a>
+                             <a (click)="navigateToUnpacking()">Unpacking Service</a>
                          </h3>
                          <p class="service-text">
                           Our unpacking service ensures a stress-free move by organizing your belongings and setting up essentials in your new space.
                          </p>
                          <div class="service-arrow">
-                             <a href="unpacking" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
+                             <a (click)="navigateToUnpacking()" class="theme-btn">Read More <span class="far fa-arrow-right"></span></a>
                          </div>
                      </div>
                  </div>
@@ -285,7 +286,7 @@
                          </div>
                          <p class="about-text">We understand that moving can be both exciting and overwhelming, and you may have questions about how we can assist you in making the process as smooth as possible. Whether you're relocating to a new home or transitioning to a new office space, Moving Cheese Removal got you covered.</p>
                          <p> If you have inquiries not addressed in the FAQ, please click the button below to submit your question.</p>
-                         <a href="contact" class="theme-btn mt-5">Ask Your Question <i class="far fa-arrow-right"></i></a>
+                         <a (click)="navigateToContact()" class="theme-btn mt-5">Ask Your Question <i class="far fa-arrow-right"></i></a>
                      </div>
                  </div>
                  <div class="col-lg-6">

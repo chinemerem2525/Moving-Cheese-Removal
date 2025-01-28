@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { QuoteFormDetails } from '../../model/quote';
 import { Subscriber } from 'rxjs';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-get-quote',
@@ -16,7 +17,7 @@ export class GetQuoteComponent implements OnInit {
   selectedVideo: File | null = null;
 
 
-  constructor(private fb: FormBuilder, private fs: FormService) {}
+  constructor(private fb: FormBuilder, private fs: FormService, private ns: NotificationService,) {}
 
   ngOnInit(): void {
     this.quoteForm = this.fb.group({
@@ -45,6 +46,7 @@ export class GetQuoteComponent implements OnInit {
 
   onSubmit(): void {
     if (this.quoteForm.valid) {
+      this.ns.showNotification('Form submitted', 'success');
       const quoteFormDetails = new QuoteFormDetails(
        this.id,
        this.quoteForm.value.name,
@@ -65,8 +67,9 @@ export class GetQuoteComponent implements OnInit {
       this.fs.sendFormData(quoteFormDetails).subscribe(
         (response: any) => {
           console.log('Form submitted', response.name);
+          this.ns.showNotification('Quote Request Sent', 'success');
         },
-        (error) => {
+        (error: any) => {
           console.error('Error submitting form', error);
         }
       );
@@ -75,6 +78,7 @@ export class GetQuoteComponent implements OnInit {
       this.selectedVideo = null; // Reset the selected video
     } else {
       console.log('Form is invalid');
+      this.ns.showNotification('Fill the form completely', 'error');
     }
   }
 }

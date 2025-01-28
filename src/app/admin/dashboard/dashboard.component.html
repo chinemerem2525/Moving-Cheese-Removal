@@ -1,6 +1,22 @@
+<div class="sidebar d-flex flex-column p-3" style="width: 100; height: auto; ">
+  <h2>Admin Panel</h2>
+  <ul class="nav flex-column">
+      <li class="nav-item">
+          <a href="#contact-form" class="nav-link">
+              <i class="fas fa-envelope me-2"></i> Contact Form
+          </a>
+      </li>
+      <li class="nav-item">
+          <a href="#quote-form" class="nav-link">
+              <i class="fas fa-file-alt me-2"></i> Quote Form
+          </a>
+      </li>
+  </ul>
+</div>
+
 <div class="mt-4 d-flex">
-  <!-- Sidebar -->
-  <div class="sidebar d-flex flex-column p-3" style="width: 250px; height: 100vh;">
+  <!-- Sidebar
+  <div class="sidebar d-flex flex-column p-3" style="width: 250px; height: 100vh; ">
       <h2>Admin Panel</h2>
       <ul class="nav flex-column">
           <li class="nav-item">
@@ -14,7 +30,7 @@
               </a>
           </li>
       </ul>
-  </div>
+  </div> -->
 
   <!-- Main Content -->
   <div class="flex-grow-1 main-content">
@@ -124,5 +140,83 @@
           </div>
       </div>
 
+  </div>
+</div>
+
+<div class="container my-4">
+  <h2 class="mb-4">Contact Form Dashboard</h2>
+  <button class="clear-form-btn btn mb-4">Clear Tasks</button>
+  <div class="row g-4">
+      <div class="col-md-6">
+          <div class="card shadow-sm">
+              <div class="card-header" *ngFor="let data of contactData">
+                  <h3 class="h5">{{ data.name }}</h3>
+                  <button title="Delete" class="delete-btn btn btn-link p-0">
+                    <button (click)="toggleContactConfirmDialog(data.id)" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></button>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <p><b>Last Name: </b></p>
+                  <p><b>Email: </b>ol.lo@ik.me</p>
+                  <p><b>Phone Number: </b></p>
+                  <p><b>Fish Type: </b>41772218588</p>
+                  <p><b>Quantity: </b>1000000000000</p>
+                  <p><b>Optional Fish Type: </b>Lorimier Aquarium</p>
+                  <p><b>Message: </b>Switzerland</p>
+                  <p><b>Message: </b>Terrestrial Invertebrates, mainly insects (Beetles)</p>
+                  <p><b>Message: </b>1000000000000</p>
+                  <p><b>Message: </b>Dear Sir, Send me please your pricelist and conditions. Airport of destination is Geneva (GVA). Best Regards, Olivier</p>
+                  <p><b>Date: </b>2024-12-12T20:45:37.161Z</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="card shadow-sm">
+              <div class="card-header">
+                  <h3 class="h5">Joseph Agbor</h3>
+                  <button title="Delete" class="delete-btn btn btn-link p-0">
+                      <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <p><b>Last Name: </b></p>
+                  <p><b>Email: </b>tanuagborjune@gmail.com</p>
+                  <p><b>Phone Number: </b>7031002385</p>
+                  <p><b>Fish Type: </b>7031002385</p>
+                  <p><b>Quantity: </b>50</p>
+                  <p><b>Optional Fish Type: </b>Joseph Agbor</p>
+                  <p><b>Message: </b>Nigeria</p>
+                  <p><b>Message: </b>Cross River Puffer Fish (tetraodon pustulatus)</p>
+                  <p><b>Message: </b>50</p>
+                  <p><b>Message: </b>We have capacity to supply between 50 to 150 Cross River Puffer Fish (tetraodon pustulatus) per month</p>
+                  <p><b>Date: </b>2025-01-27T15:44:26.929Z</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <h2 class="mt-5 mb-4">Quote Form Dashboard</h2>
+  <button class="clear-form-btn btn mb-4">Clear Tasks</button>
+  <div class="row g-4">
+      <div class="col-md-6">
+          <div class="card shadow-sm">
+              <div class="card-header">
+                  <h3 class="h5">Olivier</h3>
+                  <button title="Delete" class="delete-btn btn btn-link p-0">
+                      <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <p><b>Name: </b>Olivier</p>
+                  <p><b>Email: </b>ol.lo@ik.me</p>
+                  <p><b>Phone No: </b>41772218588</p>
+                  <p><b>Moving Type: </b>Butterflyfish</p>
+                  <p><b>Move Date: </b>10000000000000000000</p>
+                  <p><b>Moving From: </b>Pricelist for terrestrial invertebrates, mainly insects (beetles)</p>
+                  <p><b>Moving To: </b>Dear Sir, Send me please our pricelist and conditions. Airport of dest. is GVA (Genève) Switzerland. Best Regards, olivier ol.lo@ik.me www.lorimier-aquarium.ch</p>
+                  <p><b>Inventory: </b>2024-12-12T20:48:28.866Z</p>
+                  <p><b>Message: </b></p>
+              </div>
+          </div>
+      </div>
   </div>
 </div>
