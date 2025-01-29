@@ -9,14 +9,7 @@ const routes: Routes = [
     path: '',
     component: AdminComponent,
     children: [
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'InformationCockpitEnd',
-        component: DashboardComponent
-      }
+      { path: '', redirectTo: '/login', pathMatch: 'full' }, { path: 'login', component: LoginComponent }, { path: 'InformationCockpitEnd', component: DashboardComponent },
     ]
   }
 ];
