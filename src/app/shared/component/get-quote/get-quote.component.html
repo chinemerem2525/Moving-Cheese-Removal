@@ -126,6 +126,21 @@
                             </small>
                           </div>
                         </div>
+                         <!-- Apartment type -->
+                        <div class="col-md-12" *ngIf="isHouseRemoval">
+                          <div class="form-group">
+                            <textarea
+                              formControlName="apartment"
+                              class="form-control"
+                     placeholder="Your current Type Of Apartment: eg 2 bedroom, 3 bedroom "
+                              rows="2"
+                            ></textarea>
+                            <small class="text-danger" *ngIf="quoteForm.get('apartment')?.touched && quoteForm.get('apartment')?.invalid">
+                              Specify Apartment Type
+                            </small>
+                          </div>
+                        </div>
+
 
                         <!-- Inventory (conditional) -->
                         <div class="col-md-12" *ngIf="isHouseRemoval">
@@ -154,7 +169,7 @@
 
                         <!-- Submit Button -->
                         <button class="theme-btn" type="submit">
-                          <i class="far fa-bookmark"></i> Send Book Request
+                          <i class="far fa-bookmark"></i> Send Quote Request
                         </button>
                       </div>
                     </form>

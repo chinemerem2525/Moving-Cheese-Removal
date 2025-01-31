@@ -9,6 +9,7 @@ export class QuoteFormDetails {
     public movingFrom: string,
     public movingTo: string,
     public inventory: string,
+    public apartment: string,
     public message: string = '', // Provide a default value
     public date: string
   ) {}

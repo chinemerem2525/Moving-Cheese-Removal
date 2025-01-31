@@ -23,11 +23,12 @@ export class GetQuoteComponent implements OnInit {
     this.quoteForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern('[0-9]{10,}')]],
+      phone: ['', [Validators.required, Validators.pattern(/^\+?[1-9]\d{0,14}(\s?\d{1,4}){1,3}(\s?\d{1,4}){1,3}$/)]],
       movingType: ['', Validators.required],
       moveDate: ['', Validators.required],
       movingFrom: ['', Validators.required],
       movingTo: ['', Validators.required],
+      apartment: [''],
       inventory: [''],
       message: [''],
     });
@@ -37,11 +38,16 @@ export class GetQuoteComponent implements OnInit {
     this.isHouseRemoval = this.quoteForm.get('movingType')?.value === 'House Removal';
     if (this.isHouseRemoval) {
       this.quoteForm.get('inventory')?.setValidators(Validators.required);
+      this.quoteForm.get('apartment')?.setValidators(Validators.required);
     } else {
       this.quoteForm.get('inventory')?.clearValidators();
       this.quoteForm.get('inventory')?.reset();
+
+      this.quoteForm.get('apartment')?.clearValidators();
+      this.quoteForm.get('apartment')?.reset();
     }
     this.quoteForm.get('inventory')?.updateValueAndValidity();
+    this.quoteForm.get('apartment')?.updateValueAndValidity();
   }
 
   onSubmit(): void {
@@ -56,8 +62,9 @@ export class GetQuoteComponent implements OnInit {
        this.quoteForm.value.moveDate,
        this.quoteForm.value.movingFrom,
        this.quoteForm.value.movingTo,
-       this.quoteForm.value.message,
+       this.quoteForm.value.apartment,
        this.quoteForm.value.inventory,
+       this.quoteForm.value.message,
        new Date().toISOString()
       );
 
@@ -66,7 +73,7 @@ export class GetQuoteComponent implements OnInit {
       // Send FormData to the service
       this.fs.sendFormData(quoteFormDetails).subscribe(
         (response: any) => {
-          console.log('Form submitted', response.name);
+          // console.log('Form submitted', response.name);
           this.ns.showNotification('Quote Request Sent', 'success');
         },
         (error: any) => {
