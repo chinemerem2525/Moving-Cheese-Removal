@@ -23,9 +23,9 @@ export class GetQuoteComponent implements OnInit {
     this.quoteForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern(/^\+?[1-9]\d{0,14}(\s?\d{1,4}){1,3}(\s?\d{1,4}){1,3}$/)]],
+      phone: ['', [Validators.required]],
       movingType: ['', Validators.required],
-      moveDate: ['', Validators.required],
+      moveDate: ['Select Move Date', Validators.required],
       movingFrom: ['', Validators.required],
       movingTo: ['', Validators.required],
       apartment: [''],
