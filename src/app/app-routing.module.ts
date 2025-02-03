@@ -11,52 +11,57 @@ import { UnpackingComponent } from './client/unpacking/unpacking.component';
 import { LoginComponent } from './admin/login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
-
 const routes: Routes = [
   {
     path: '',
-    loadChildren: ()=> import('./client/client.module').then(m => m.ClientModule),
+    loadChildren: () =>
+      import('./client/client.module').then((m) => m.ClientModule),
   },
   {
     path: '',
-    loadChildren: ()=> import('./admin/admin.module').then(m => m.AdminModule),
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
   },
   {
     path: 'quote',
-    component: QuoteComponent
+    component: QuoteComponent,
   },
   {
     path: 'home-removal',
-    component: HomeRemovalComponent
+    component: HomeRemovalComponent,
   },
   {
     path: 'office-removal',
-    component: OfficeRemovalComponent
+    component: OfficeRemovalComponent,
   },
   {
     path: 'packing',
-    component: PackingComponent
+    component: PackingComponent,
   },
   {
     path: 'unpacking',
-    component: UnpackingComponent
+    component: UnpackingComponent,
   },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-   { path: 'login', component: LoginComponent },
-    { path: 'InformationCockpitEnd', component: DashboardComponent },
-
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'InformationCockpitEnd',
+    component: DashboardComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
