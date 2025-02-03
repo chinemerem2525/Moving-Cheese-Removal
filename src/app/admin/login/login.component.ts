@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
         this.ns.showNotification('Logged In', 'success');
         this.router.navigate(['/InformationCockpitEnd']);  // Navigate to the dashboard on successful login
       } else {
-        this.ns.showNotification('Invalid email or password', 'error');
+        this.ns.showNotification('Invalid Username or password', 'error');
       }
     }
 }
